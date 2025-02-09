@@ -3,7 +3,6 @@
   height: 850px;
   position: relative;
   background-color: #F2F2F4;
-  // z-index: 1000;
 
   &__bg-image {
     position: absolute;
@@ -18,7 +17,6 @@
 
   .container {
     position: absolute;
-    // border: 1px solid white;
     top: 199px;
     left: 50%;
     transform: translateX(-50%);
@@ -29,7 +27,6 @@
   }
 
   &__title {
-    // text-transform: lowercase;
     text-transform: uppercase;
     margin: 0;
     font-family: "futurafuturisc-bold";
@@ -41,7 +38,6 @@
       font-family: "futurafuturisc-bold";
       font-weight: 700;
       text-transform: lowercase;
-      // text-transform: uppercase;
       font-size: 56px;
       line-height: 56px;
     }
@@ -56,7 +52,6 @@
     span {
       font-family: "futurafuturisc";
       font-weight: 700;
-      // text-transform: lowercase;
       text-transform: uppercase;
       font-size: 61px;
       line-height: 75px;
@@ -74,7 +69,6 @@
 
   &__list {
     list-style: none;
-    // background: linear-gradient(to right, #969AF7 0%, #969AF700 100%);
     background: linear-gradient(to right, rgba(150, 154, 247, 0.3) 0%, rgba(150, 154, 247, 0) 100%);
     padding: 25px 60px;
     border-radius: 10px;

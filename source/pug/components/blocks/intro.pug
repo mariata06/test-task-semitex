@@ -1,10 +1,39 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
+  section.intro
+    .intro__bg-image
+      img(src="img/svg/intro-bg-blue.svg", alt="")
+      img(src="img/svg/intro-bg-vector.svg", alt="")
     .container
-      p(style="margin-top: 40px;") Текст&nbsp;с&nbsp;мнемониками
+      .intro__desc
+        h1.intro__title.title.title--h1 Оптовые поставки
+          span.whitespace
+          span.violet-text электронных компонентов
+          span.whitespace
+          span.chine ИЗ&nbsp;КИТАЯ&nbsp;день в день
 
-      p(style="margin-top: 40px;") Пример использования +img()
-      p(style="margin-bottom: 40px;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+        p.intro__paragraph.violet-text Комплексные поставки электронных компонентов и оборудования. Подберем&nbsp;аналоги&nbsp;популярных брендов из Европы в условиях санкций.
+
+        ul.intro__list
+          li.intro__list-item Отсрочка платежей для постоянных клиентов
+            +icon("icon-check", 14, 11)
+          li.intro__list-item Бесплатная доставка по Москве и СПБ в течение 2х часов
+            +icon("icon-check", 14, 11)
+          li.intro__list-item Квалифицированный персональный менеджер
+            +icon("icon-check", 14, 11)
+
+      .intro__form
+        form(action="#").form
+          .form__header
+            h3.form__title ЗАКАЖИТЕ ОБРАТНЫЙ&nbsp;ЗВОНОК
+          .form__body
+            .form__input-wrapper
+              label(for="name") Ваше имя*
+              input(type="text" id="name" name="name" required placeholder="Петров Петр")
+            .form__input-wrapper
+              label(for="phone") Ваш номер*
+              input(type="tel" id="phone" name="phone" required placeholder="+7 (_ _ _) _ _ _-_ _-_ _")
+            button(type="submit").form__submit.btn Заказать звонок
+            .form__privacy
+              span.form__privacy-icon
+                +icon("icon-lock", 16, 16)
+              | Мы гарантируем конфиденциальность данных

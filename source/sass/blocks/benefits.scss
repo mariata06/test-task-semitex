@@ -1,0 +1,242 @@
+.benefits {
+  --main-circle-size: 157px;
+  --petal-size: 112px;
+  --main-color: #ff7c7c;
+  --petal-color: #07086C;
+  height: 1270px;
+  position: relative;
+
+  background-color: #F2F2F4;
+  // padding-top: 50px;
+  padding-bottom: 50px;
+  // z-index: 100;
+  // position: relative;
+
+  .container {
+    position: absolute;
+    top: 50%;
+    // z-index: 100;
+    // padding-left: 208px;
+    // padding-right: 208px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    font-family: "futurafuturisc-bold";
+    font-weight: 700;
+    color: #111111;
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  &__paragraph {
+    font-family: "futurabookc";
+    font-weight: 400;
+    color: #030303;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+    padding: 0 110px;
+    margin-bottom: 42px;
+  }
+
+  .flower {
+    position: relative;
+    width: var(--main-circle-size);
+    height: var(--main-circle-size);
+    // margin: 50px;
+    // border: 1px solid green;
+  }
+
+  .circle {
+    position: absolute;
+    width: var(--petal-size);
+    height: var(--petal-size);
+    border-radius: 50%;
+    background-color: var(--main-color);
+  }
+
+  .petal {
+    background-color: var(--petal-color);
+    width: var(--petal-size);
+    height: var(--petal-size);
+    opacity: 10%;
+    position: absolute;
+  }
+
+  .petal.one {
+    top: -10px;
+    left: 30px;
+    background-color: #07086C;
+    opacity: 10%;
+  }
+
+  .petal.two {
+    bottom: 10px;
+    left: -10px;
+  }
+
+  .petal.three {
+    bottom: 0;
+    right: 0;
+  }
+
+  .main {
+    width: 112px;
+    height: 112px;
+    border-radius: 1000px;
+    background: linear-gradient(to bottom, #040A57 0%, #07086C 50%, #3A23E6 100%);
+    position: relative;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10000;
+    }
+  }
+}
+
+// $benefits: (
+//   (title: "Title 1",
+//     description: "Description for benefit 1",
+//     icon: "icon-cert1",
+//     iconWidth: 52,
+//     iconHeight: 43),
+//   (title: "Title 2",
+//     description: "Description for benefit 2",
+//     icon: "icon-cert2",
+//     iconWidth: 55,
+//     iconHeight: 45),
+//   (title: "Title 3",
+//     description: "Description for benefit 3",
+//     icon: "icon-cert3",
+//     iconWidth: 60,
+//     iconHeight: 50),
+//   (title: "Title 4",
+//     description: "Description for benefit 4",
+//     icon: "icon-cert4",
+//     iconWidth: 58,
+//     iconHeight: 47),
+//   (title: "Title 5",
+//     description: "Description for benefit 5",
+//     icon: "icon-cert5",
+//     iconWidth: 54,
+//     iconHeight: 42),
+//   (title: "Title 6",
+//     description: "Description for benefit 6",
+//     icon: "icon-cert6",
+//     iconWidth: 53,
+//     iconHeight: 44)
+// );
+
+// Микс для каждого элемента списка
+// @mixin benefits-item($title, $description, $icon, $iconWidth, $iconHeight) {
+//   .benefits__item {
+//     .flower {
+//       // span.circle.main {
+//       //   +icon($icon, $iconWidth, $iconHeight);
+//       // }
+
+//       span.circle.petal.one {}
+
+//       span.circle.petal.two {}
+
+//       span.circle.petal.three {}
+//     }
+
+//     .benefits__item-desc {
+//       h3.benefits__item-title.title--h3 {
+//         content: $title;
+//       }
+
+//       p.benefits__item-paragraph {
+//         content: $description;
+//       }
+//     }
+//   }
+// }
+
+// Цикл по массиву для генерации всех элементов
+// @each $benefit in $benefits {
+//   @include benefits-item(map-get($benefit, title),
+//     map-get($benefit, description),
+//     map-get($benefit, icon),
+//     map-get($benefit, iconWidth),
+//     map-get($benefit, iconHeight));
+// }
+
+.benefits {
+  background-color: #F2F2F4;
+}
+
+.benefits__list {
+  display: grid;
+  grid-template-columns: repeat(3, 369px);
+  /* 3 элемента в ряду */
+  grid-gap: 43px;
+  /* расстояние между элементами */
+  justify-content: center;
+  /* выравнивание по центру (если нужно) */
+}
+
+.benefits__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 369px;
+  /* ширина элемента */
+  padding: 40px 32px 39px;
+  background-color: $color-default-white;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    /* Пустой контент для псевдоэлемента */
+    position: absolute;
+    bottom: -350px;
+    right: -190px;
+    width: 442px;
+    /* Размер квадрата */
+    height: 442px;
+    /* Размер квадрата */
+    background-color: #000;
+    background-color: #5172C4;
+    opacity: 7%;
+    /* Цвет квадрата */
+    transform: rotate(45deg);
+    /* Поворот квадрата на 45 градусов */
+    border-radius: 30px;
+    /* Скругление углов */
+  }
+
+  h3 {
+    font-family: "futurafuturisc-bold";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #2A336C;
+    text-align: center;
+  }
+
+  p {
+    font-family: "futurabookc";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #555555;
+    text-align: center;
+  }
+}

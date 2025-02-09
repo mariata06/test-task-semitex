@@ -1,36 +1,50 @@
-mixin header(headerMods, currentUrl)
+mixin header(headerMods)
   -
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Каталог"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "Производители"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Для  кого мы работаем"
+      },
+      {
+        href: "#",
+        text: "Сертификаты"
+      },
+      {
+        href: "#",
+        text: "О нас"
+      },
+      {
+        href: "#",
+        text: "FAQ"
+      },
+      {
+        href: "#",
+        text: "Контакты"
       },
     ]
 
-  header.header(class=headerMods)
+  header.header(class=headerMods, id="top")
     .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+      a(href="index.html" aria-label="Переход на главную").header__logo
+        +img("content", "logo-img", "png", 155, 28, "semitex")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
+        ul.main-nav__list
+          each link in headerLinks
+            li.main-nav__item
+              a.main-nav__link(href=link.href)= link.text
+
+        .main-nav__phone
+          a.main-nav__link(href="tel:+78123135845")
+            span.main-nav__icon-wrapper
+              +icon("icon-phone", 14, 14)
+            span.main-nav__num-wrapper
+              span(class="main-nav__span-light") +7 (812)&nbsp;
+              span(class="main-nav__span-bold") 313-58-45

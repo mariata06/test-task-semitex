@@ -1,10 +1,14 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 10px 20px;
+  cursor: pointer;
 
-  color: $color-default-white;
+  // color: $color-default-white;
 
-  background-color: $color-neon-blue;
+  // background-color: $color-neon-blue;
   border: none;
   cursor: pointer;
 

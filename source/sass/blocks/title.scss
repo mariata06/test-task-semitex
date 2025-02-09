@@ -1,0 +1,17 @@
+.title {
+  &--h1 {
+      font-size: 69px;
+      line-height: 69px;
+      color: $color-default-white;
+
+      span {
+        // color: #969AF7;
+      }
+    }
+  &--h2 {
+    font-family: "futurafuturisc-bold";
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+  }
+}

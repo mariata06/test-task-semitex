@@ -1,0 +1,107 @@
+.intro {
+  min-height: 850px;
+  height: 850px;
+  position: relative;
+  background-color: #F2F2F4;
+  // z-index: 1000;
+
+  &__bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .container {
+    position: absolute;
+    // border: 1px solid white;
+    top: 199px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__desc {
+    width: 820px;
+  }
+
+  &__title {
+    // text-transform: lowercase;
+    text-transform: uppercase;
+    margin: 0;
+    font-family: "futurafuturisc-bold";
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+
+    .violet-text {
+      font-family: "futurafuturisc-bold";
+      font-weight: 700;
+      text-transform: lowercase;
+      // text-transform: uppercase;
+      font-size: 56px;
+      line-height: 56px;
+    }
+
+    .chine {
+      font-family: "futurafuturisc-bold";
+      font-weight: 700;
+      font-size: 61px;
+      line-height: 75px;
+    }
+
+    span {
+      font-family: "futurafuturisc";
+      font-weight: 700;
+      // text-transform: lowercase;
+      text-transform: uppercase;
+      font-size: 61px;
+      line-height: 75px;
+    }
+  }
+
+  &__paragraph {
+    font-family: "futurabookc";
+    font-weight: 400;
+    color: #969AF7;
+    font-size: 23px;
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
+
+  &__list {
+    list-style: none;
+    // background: linear-gradient(to right, #969AF7 0%, #969AF700 100%);
+    background: linear-gradient(to right, rgba(150, 154, 247, 0.3) 0%, rgba(150, 154, 247, 0) 100%);
+    padding: 25px 60px;
+    border-radius: 10px;
+  }
+
+  &__list-item {
+    font-family: "futurabookc";
+    font-size: 22px;
+    line-height: 29px;
+    color: $color-default-white;
+    position: relative;
+    margin-bottom: 10px;
+
+    svg {
+      position: absolute;
+      left: -25px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__form {
+    width: 380px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

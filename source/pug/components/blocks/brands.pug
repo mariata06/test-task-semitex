@@ -1,0 +1,35 @@
+mixin brands()
+  section.brands
+    .brands__bg-image
+      //- +icon("brands-vector-1", 1920, 728)
+      //- +icon("brands-vector-2", 1920, 728)
+      //- +img("svg", "brands-vector-1", "svg", "", "", "eaier")
+      //- +img("svg", "brands-vector-2", "svg", "", "", "eaier")
+      img(src="img/svg/brands-vector-1.svg", alt="")
+      img(src="img/svg/brands-vector-2.svg", alt="")
+    .container
+      h2.brands__title.title.title--h2 Наши производители
+      .brands__slider
+        .brands__slider-wrapper
+          .brands__list
+            .brands__item
+              +img("content", "eaier", "png", 150, 94, "eaier")
+            .brands__item
+              +img("content", "foryard", "png", 186, 47, "foryard")
+            .brands__item
+              +img("content", "fujicon", "png", 106, 106, "fujicon")
+            .brands__item
+              +img("content", "js_artificial_grass", "png", 171, 116, "js_artificial_grass")
+            .brands__item
+              +img("content", "marquis", "png", 183, 40, "marquis")
+
+          .brands__slider-nav
+            button.brands__slider-btn.btn.brands__slider-btn--left
+              +icon("icon-arrow-left", 7, 13)
+            button.brands__slider-btn.btn.brands__slider-btn--right
+              +icon("icon-arrow-right", 7, 13)
+
+        p.brands__paragraph Lorem ipsum dolor sit amet consectetur. Non eget blandit in euismod felis id quisque nunc. Non orci lacus elit mauris velit gravida imperdiet id. Ipsum pulvinar ac ut sociis. Sed magna gravida consequat et euismod aenean quis mauris. Ut etiam egestas ultrices faucibus ultrices nisl enim consequat faucibus. Nibh id leo ullamcorper eleifend. Id at commodo interdum et leo.
+
+
+

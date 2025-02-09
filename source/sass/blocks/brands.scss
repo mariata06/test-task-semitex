@@ -1,0 +1,116 @@
+.brands {
+  // padding-top: 250px;
+  // padding-bottom: 150px;
+  background-color: #f2f2f4;
+  background-color: #F2F2F4;
+  height: 728px;
+  position: relative;
+  z-index: 100;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    // margin: 0 71px;
+    padding: 0 71px;
+  }
+  &__item {
+    width: 242px;
+    min-height: 174px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-default-white;
+  }
+
+  &__bg-image {
+    width: 100%;
+    height: 100%;
+    // position: relative;
+    // position: absolute;
+
+    svg, img {
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  .container {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    padding-left: 208px;
+    padding-right: 208px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    font-family: "futurafuturisc-bold";
+    font-weight: 700;
+    color: $color-default-white;
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &__paragraph {
+    font-family: "futurabookc";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+    color: $color-default-white;
+    margin: 40px 71px;
+
+  }
+
+  &__slider {
+    width: 1504px;
+  }
+
+  &__slider-btn {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: $color-default-white;
+    border-radius: 100px;
+    border: none;
+    padding: 0;
+    position: absolute;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    svg {
+      fill: currentColor;
+      width: 7px;
+      height: 13px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__slider-nav {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__slider {
+    position: relative;
+  }
+
+  &__slider-wrapper {
+    position: relative;
+  }
+}

@@ -1,0 +1,264 @@
+.workflow {
+  height: 1098px;
+  position: relative;
+  // padding-top: 130px;
+  // padding-bottom: 150px;
+  margin-top: -60px;
+  margin-bottom: -70px;
+  background-color: #F2F2F4;
+  // padding-top: 50px;
+  // z-index: 1000;
+
+  &__item-bg {
+    position: absolute;
+    top: 0;
+    // left: 0;
+  }
+
+  &__item:first-child svg {
+    // z-index: 1000;
+    right: -20px;
+  }
+
+  &__item:nth-child(2) svg {
+  // z-index: 900;
+  right: -10px;
+  }
+
+  &__item:nth-child(4) svg {
+    // z-index: 900;
+    right: 5px;
+  }
+
+  &__item:nth-child(5) svg {
+    // z-index: 900;
+    right: 15px;
+  }
+
+  &__item:nth-child(6) svg {
+    // z-index: 900;
+    right: 25px;
+  }
+
+  &__item {
+    // width: 439px;
+    // background: linear-gradient(to right, #040A57 0%, #07086C 50%, #3A23E6 100%);
+    // background: linear-gradient(to right, #041080 0%, #0926C0 100%);
+    border-radius: 20px;
+    // padding: 40px 60px;
+    // padding-right: 10px;
+    // padding-left: 100px;
+    // overflow: hidden;
+    position: relative;
+    counter-increment: item;
+    max-height: 268px;
+    // z-index: 100;
+
+    &::after {
+      content: '';
+      /* Пустой контент для псевдоэлемента */
+      position: absolute;
+      bottom: -400px;
+      right: -165px;
+      width: 442px;
+      /* Размер квадрата */
+      height: 442px;
+      /* Размер квадрата */
+      background-color: $color-default-white;
+      opacity: 6%;
+      /* Цвет квадрата */
+      transform: rotate(45deg);
+      /* Поворот квадрата на 45 градусов */
+      border-radius: 30px;
+      /* Скругление углов */
+    }
+
+    span {
+      font-family: "futurafuturisc-bold";
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      font-weight: bold;
+      // color: #969AF7;
+      /* Цвет номера */
+      position: absolute;
+      top: 39px;
+      left: 38px;
+    }
+
+    // &::before {
+    //   content: "0" counter(item);
+    //   /* Формируем номер с ведущим нулем */
+    //   font-size: 36px;
+    //   line-height: 42px;
+    //   font-weight: bold;
+    //   color: #969AF7;
+    //   /* Цвет номера */
+    //   position: absolute;
+    //   top: 39px;
+    //   left: 38px;
+    // }
+
+    &::before {
+      // content: "";
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      /* Расположить справа */
+      width: 132px;
+      /* Ширина ромба */
+      height: 140px;
+      /* Высота ромба */
+      background: inherit;
+      /* Наследуем градиент */
+      transform: translateY(-50%) rotate(90deg);
+      /* Поворот ромба */
+      clip-path: polygon(0 25%, 50% 0, 100% 25%, 50% 100%);
+      /* Тупой угол в ромбе */
+      z-index: -1;
+      background-color: #0926C0;
+      z-index: -1;
+    }
+
+    h3 {
+      font-family: "futurafuturisc-bold";
+      font-weight: 700;
+      color: $color-default-white;
+      font-size: 18px;
+      line-height: 25px;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: "futurabookc";
+      font-weight: 400;
+      color: #E3E3E3;
+      font-size: 18px;
+      line-height: 25px;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item:nth-child(3)::before,
+  &__item:nth-child(6)::before {
+    display: none;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 439px);
+    /* 3 элемента в ряду */
+    // grid-gap: 43px;
+    justify-content: center;
+    /* расстояние между элементами */
+    justify-content: center;
+    gap: 30px 0;
+    margin-bottom: 49px;
+    counter-reset: item;
+  }
+
+  &__item-wrapper {
+    position: relative;
+    padding: 40px 60px;
+    padding-right: 40px;
+    padding-left: 100px;
+    overflow: hidden;
+    height: 100%;
+
+    &::before {
+      // content: "";
+      position: absolute;
+      top: 50%;
+      right: calc(100% - 15px);
+      /* Расположить слева */
+      width: 132px;
+      /* Ширина ромба */
+      height: 140px;
+      /* Высота ромба */
+      background: transparent;
+      background: pink;
+      background-color: $color-default-white;
+      /* Наследуем градиент */
+      transform: translateY(-50%) rotate(90deg);
+      /* Поворот ромба */
+      clip-path: polygon(0 25%, 50% 0, 100% 25%, 50% 100%);
+      /* Форма тупого ромба */
+      z-index: 1;
+    }
+
+    &::after {
+      // content: '';
+      /* Пустой контент для псевдоэлемента */
+      position: absolute;
+      bottom: -400px;
+      right: -200px;
+      width: 442px;
+      /* Размер квадрата */
+      height: 442px;
+      /* Размер квадрата */
+      background-color: $color-default-white;
+      opacity: 6%;
+      /* Цвет квадрата */
+      transform: rotate(45deg);
+      /* Поворот квадрата на 45 градусов */
+      border-radius: 30px;
+      /* Скругление углов */
+    }
+  }
+
+  &__title {
+    font-size: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+
+  &__paragraph {
+    font-family: "futurabookc";
+    font-weight: 400;
+    text-align: center;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &__item-title {
+    font-size: 18px;
+    line-height: 25px;
+    color: $color-default-white;
+    margin-bottom: 28px;
+  }
+
+  &__item-desc {
+    font-size: 18px;
+    line-height: 27px;
+    color: $color-default-white;
+  }
+
+  &__btn {
+    color: $color-default-white;
+    background-color: #FFA500;
+    border-radius: 10px;
+    padding: 18px 72px;
+    border: none;
+    margin: 0 auto;
+    display: block;
+    z-index: 1000;
+    position: relative;
+  }
+
+  &__bg-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .container {
+    position: absolute;
+    // top: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

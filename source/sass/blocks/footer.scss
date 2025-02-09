@@ -1,5 +1,76 @@
 .footer {
-  padding: 40px 0;
+  padding: 61px 0 60px;
+  z-index: 1000;
+  // bottom: 0;
+  // position: relative;
+  // display: none;
 
-  background-color: $color-neon-blue;
+  // background-color: $color-neon-blue;
+  background-color: #333333;
+  // display: none;
+  margin-top: 0;
+
+  &__nav-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    width: 765px;
+  }
+
+  &__nav-item {
+    margin: 0 18px;
+    margin: 0;
+    margin-right: 36px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-link {
+    color: $color-default-white;
+    font-family: "futurabookctt-normal";
+    font-size: 18px;
+    line-height: 22px;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btn {
+    background-color: #969AF7;
+    font-family: "futurafuturisc";
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $color-default-white;
+    padding: 19px 40px;
+    margin-left: auto;
+    border: none;
+  }
+
+  &__logo {
+    margin-right: 51px;
+    transition: opacity $trans-default;
+
+    @include hover-focus {
+      opacity: 0.8;
+    }
+  }
 }

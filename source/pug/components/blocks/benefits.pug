@@ -1,0 +1,64 @@
+mixin benefits()
+  -
+    const benefits = [
+      {
+        title: "Качественная продукция",
+        description: "Все наши товары сертифицированы и имеют сопроводительную документацию.",
+        icon: "icon-cert",
+        iconWidth: "52",
+        iconHeight: "43"
+        },
+      {
+        title: "Индивидуальный подход",
+        description: "Возможность изготовления компонентов специально для вас на&nbsp;заводах-изготовителя.",
+        icon: "icon-box",
+        iconWidth: "50",
+        iconHeight: "50"
+        },
+      {
+        title: "Бесплатная доставка",
+        description: "При наличии товара на складе и заказе от 10 000 рублей, доставим&nbsp;бесплатно по Москве и СПБ в течение 2х часов.",
+        icon: "icon-track",
+        iconWidth: "50",
+        iconHeight: "36"
+        },
+      {
+        title: "Подбираем аналоги",
+        description: "Поможем подобрать аналоги популярных европейских брендов в условиях санкций.",
+        icon: "icon-brands",
+        iconWidth: "50",
+        iconHeight: "50"
+        },
+      {
+        title: "Резервный запас компонентов",
+        description: "Хранение товара на наших складах для постоянных клиентов.",
+        icon: "icon-house",
+        iconWidth: "50",
+        iconHeight: "51"
+        },
+      {
+        title: "Резервный запас компонентов",
+        description: "Отсрочка платежей для постоянных клиентов.",
+        icon: "icon-clock",
+        iconWidth: "35",
+        iconHeight: "50"
+        }
+    ]
+
+  section.benefits
+    .container
+      .benefits__content
+        h2.benefits__title.title.title--h2 Почему с нами выгодно
+        p.benefits__paragraph С 1996 года мы занимаемся оптовыми поставками электронных компонентов от ведущих производителей из Европы и&nbsp;Азии для Российских потребителей.
+        .benefits__list
+          each benefit in benefits
+            .benefits__item
+              .flower
+                span(class="circle main")
+                  +icon(benefit.icon, benefit.iconWidth, benefit.iconHeight)
+                span(class="circle petal one")
+                span(class="circle petal two")
+                span(class="circle petal three")
+              .benefits__item-desc
+                h3.benefits__item-title.title.title--h3= benefit.title
+                p.benefits__item-paragraph!= benefit.description

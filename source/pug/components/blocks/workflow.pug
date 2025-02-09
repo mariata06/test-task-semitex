@@ -1,0 +1,66 @@
+mixin workflow()
+  -
+    const steps = [
+      {
+        title: "ВЫ ОСТАВЛЯЕТЕ ЗАЯВКУ",
+        description: "Отправить запрос вы можете любым удобным для вас способом: например, через форму на сайте. Также вы можете связаться с нами напрямую.",
+        icon: "icon-step-1",
+        iconWidth: "439",
+        iconHeight: "268"
+      },
+      {
+        title: "МЫ ПРОВЕРЯЕМ НАЛИЧИЕ&nbsp;ПОЗИЦИЙ",
+        description: "Проверяем наличие на складе, а&nbsp;также&nbsp;актуальность производства (возможна замена, если необходимо.) Если требуется замена - подбираем аналоги и привозим на заказ.",
+        icon: "icon-step-2",
+        iconWidth: "439",
+        iconHeight: "268"
+      },
+      {
+        title: "ФОРМИРУЕМ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ",
+        description: "На данном этапе мы с вами согласуем ценовое предложение, обговариваем сроки поставки и условия оплаты.",
+        icon: "icon-step-3",
+        iconWidth: "413",
+        iconHeight: "298"
+      },
+      {
+        title: "ВЫ ПОЛУЧАЕТЕ ТОВАР",
+        description: "Поставляем вам товар в надлежащей&nbsp;упаковке в сопровождении&nbsp;оригиналов всех необходимых документов либо вы забираете его самовывозом.",
+        icon: "icon-step-6",
+        iconWidth: "413",
+        iconHeight: "268"
+      },
+      {
+        title: "МЫ ВЫПОЛНЯЕМ ЗАКАЗ",
+        description: "Товар поступает на склад в Москву или&nbsp;Санкт-Петербург, где мы сверяем&nbsp;правильность поставки и начинаем сборку.",
+        icon: "icon-step-5",
+        iconWidth: "439",
+        iconHeight: "268"
+      },
+      {
+        title: "ПРОВОДИМ ОПЛАТУ",
+        description: "Далее, после получения авансового платежа, мы размещаем заказ.",
+        icon: "icon-step-4",
+        iconWidth: "439",
+        iconHeight: "268"
+      }
+    ]
+
+  section.workflow(id="workflow")
+    .workflow__bg-image
+      img(src="img/svg/workflow-bg-vector.svg", alt="")
+    .container
+      .workflow__text
+        h2.title.title--h2.workflow__title Схема работы
+
+      .workflow__wrapper
+        p.workflow__paragraph Lorem ipsum dolor sit amet consectetur. Augue velit in enim sagittis imperdiet sit mauris. Vitae sit in fusce massa amet.
+        .workflow__list
+          each step, i in steps
+            .workflow__item
+              +icon(step.icon, step.iconWidth, step.iconHeight).workflow__item-bg
+              .workflow__item-wrapper
+                span(class="violet-text")= (i + 1).toString().padStart(2, '0')
+                h3.title.title--h3.workflow__item-title!= step.title
+                p.workflow__item-desc!= step.description
+
+        button.workflow__btn.btn ОСТАВИТЬ ЗАЯВКУ

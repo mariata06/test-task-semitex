@@ -1,3 +1,46 @@
 mixin footer(footerMods)
+  -
+    const footerLinks = [
+      {
+        href: "#",
+        text: "Каталог"
+      },
+      {
+        href: "#",
+        text: "Производители"
+      },
+      {
+        href: "#",
+        text: "Для  кого мы работаем"
+      },
+      {
+        href: "#",
+        text: "Сертификаты"
+      },
+      {
+        href: "#",
+        text: "О нас"
+      },
+      {
+        href: "#",
+        text: "Контакты"
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container
+      a(href="#top").footer__logo
+        +img("content", "logo", "png", 189, 34, "semitex")
+      .footer__nav
+        ul.footer__nav-list
+          each link in footerLinks
+            - const activeState = currentUrl === link.href
+            li.footer__nav-item
+              if(activeState)
+                span.footer__nav-link.is-active= link.text
+              else
+                a.footer__nav-link(href=link.href)= link.text
+
+      button.footer__btn.btn ОСТАВИТЬ ЗАЯВКУ
+
+

@@ -1,5 +1,4 @@
 .brands {
-  background-color: #f2f2f4;
   background-color: #F2F2F4;
   height: 728px;
   position: relative;
@@ -41,11 +40,10 @@
   }
 
   &__title {
-    font-family: "futurafuturisc-bold";
-    font-weight: 700;
     color: $color-default-white;
     margin-top: 150px;
     text-align: center;
+    margin: 0;
     margin-bottom: 60px;
   }
 

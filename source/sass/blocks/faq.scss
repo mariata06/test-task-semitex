@@ -26,6 +26,9 @@
     }
   }
   &__title {
+    margin: 0;
+    margin-top: 53px;
+    margin-bottom: 53px;
     font-size: 45px;
     line-height: 45px;
     color: $color-default-white;

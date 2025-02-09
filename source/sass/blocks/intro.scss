@@ -29,14 +29,11 @@
   &__title {
     text-transform: uppercase;
     margin: 0;
-    font-family: "futurafuturisc-bold";
-    font-weight: 700;
     display: flex;
     flex-direction: column;
 
     .violet-text {
       font-family: "futurafuturisc-bold";
-      font-weight: 700;
       text-transform: lowercase;
       font-size: 56px;
       line-height: 56px;
@@ -44,14 +41,12 @@
 
     .chine {
       font-family: "futurafuturisc-bold";
-      font-weight: 700;
       font-size: 61px;
       line-height: 75px;
     }
 
     span {
       font-family: "futurafuturisc";
-      font-weight: 700;
       text-transform: uppercase;
       font-size: 61px;
       line-height: 75px;

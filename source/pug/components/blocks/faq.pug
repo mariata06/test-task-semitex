@@ -1,8 +1,8 @@
 mixin faq()
   section.faq
     .faq__bg-image
-      img(src="img/svg/faq-bg-blue.svg", alt="")
-      img(src="img/content/faq-bg-vector-2.png", alt="")
+      img(src="img/svg/faq-bg-blue.svg", alt="faq bg image")
+      img(src="img/content/faq-bg-vector-2.png", alt="faq bg image")
     .container
       .faq__content
         h2.faq__title.title.title--h2 Ответы на самые популярные вопросы в сфере
@@ -23,7 +23,7 @@ mixin faq()
 mixin accordion(title, descriptions, isActive)
   .accordion(class=isActive ? "active" : "")
     .accordion__header
-      h3.accordion__title= title
+      h3.title.accordion__title= title
       button.accordion__toggle.btn(type="button")
         +icon("icon-arrow-left", 6, 13)
     .accordion__content

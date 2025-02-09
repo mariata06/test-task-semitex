@@ -1,11 +1,9 @@
 .benefits {
   --main-circle-size: 157px;
   --petal-size: 112px;
-  --main-color: #ff7c7c;
   --petal-color: #07086C;
   height: 1270px;
   position: relative;
-
   background-color: #F2F2F4;
   padding-bottom: 50px;
 
@@ -17,11 +15,7 @@
   }
 
   &__title {
-    font-family: "futurafuturisc-bold";
-    font-weight: 700;
     color: #111111;
-    font-size: 45px;
-    line-height: 45px;
     text-align: center;
   }
 
@@ -61,8 +55,6 @@
   .petal.one {
     top: -10px;
     left: 30px;
-    background-color: #07086C;
-    opacity: 10%;
   }
 
   .petal.two {
@@ -76,11 +68,10 @@
   }
 
   .main {
-    width: 112px;
-    height: 112px;
+    width: var(--petal-size);
+    height: var(--petal-size);
     border-radius: 1000px;
     background: linear-gradient(to bottom, #040A57 0%, #07086C 50%, #3A23E6 100%);
-    position: relative;
     position: absolute;
     display: block;
     top: 50%;
@@ -96,10 +87,6 @@
       z-index: 10000;
     }
   }
-}
-
-.benefits {
-  background-color: #F2F2F4;
 }
 
 .benefits__list {
@@ -128,7 +115,6 @@
     right: -190px;
     width: 442px;
     height: 442px;
-    background-color: #000;
     background-color: #5172C4;
     opacity: 7%;
     transform: rotate(45deg);
@@ -136,8 +122,6 @@
   }
 
   h3 {
-    font-family: "futurafuturisc-bold";
-    font-weight: 700;
     font-size: 20px;
     line-height: 23px;
     color: #2A336C;

@@ -47,13 +47,11 @@ mixin workflow()
 
   section.workflow(id="workflow")
     .workflow__bg-image
-      img(src="img/svg/workflow-bg-vector.svg", alt="")
+      img(src="img/svg/workflow-bg-vector.svg", alt="workflow bg image")
     .container
-      .workflow__text
-        h2.title.title--h2.workflow__title Схема работы
+      h2.title.title--h2.workflow__title Схема работы
+      p.workflow__paragraph Lorem ipsum dolor sit amet consectetur. Augue velit in enim sagittis imperdiet sit mauris. Vitae sit in fusce massa amet.
 
-      .workflow__wrapper
-        p.workflow__paragraph Lorem ipsum dolor sit amet consectetur. Augue velit in enim sagittis imperdiet sit mauris. Vitae sit in fusce massa amet.
         .workflow__list
           each step, i in steps
             .workflow__item
